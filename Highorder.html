@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+	<head>
+	  <title>gird-test-three.js</title>
+	  <style>#canvas-frame { width: 100%; height: 600px }</style>
+	  <script src="js/three.min.js"></script>
+	  <script src="js/basic.js"></script>
+	</head>
+	<body>
+	  <div id="canvas-frame" />
+	</body>
+	<script>
+	  localStorage.setItem('username', 'zcx');
+    // function welcome() {
+    //   const userName = localStorage.getItem('username');
+    //   console.log('welcome ' + userName);
+    // }
+    // function goodbye() {
+    //   const userName = localStorage.getItem('username');
+    //   console.log('goodbye ' + userName);
+    // }
+    // welcome();
+    // goodbye();
+
+    function welcome(tt) {
+    	console.log('welcome' + tt);
+    }
+    function goodbye(tt) {
+    	console.log('goodbye' + tt);
+    }
+    function wrapggg(func) {
+      const newFunc = () => {
+      	const userName = localStorage.getItem('username');
+      	func(userName);
+      }
+      return newFunc;
+    }
+    wrapggg(welcome)();
+    wrapggg(goodbye)();
+	</script>
+</html>

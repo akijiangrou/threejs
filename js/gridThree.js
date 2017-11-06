@@ -1,12 +1,8 @@
-var light;
-  var cube;
-
-  function initLight(scene) {
-    light = new THREE.DirectionalLight(0xFF0000, 1.0, 0);
+function initLight(scene) {
+    const light = new THREE.DirectionalLight(0xFF0000, 1.0, 0);
     light.position.set(100, 100, 500);
     scene.add(light);
   }
-		var cube;
 	function initObject(scene) {
 	  var geometry = new THREE.Geometry();
 	  var p1 = new THREE.Vector3( -500, 0, 0);
